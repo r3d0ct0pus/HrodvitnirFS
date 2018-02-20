@@ -1,0 +1,32 @@
+{
+  "name": "HrodvitnirFS",
+  "productName": "Electron base tag filemanager",
+  "description": "Starter for your electron + sqlite application",
+  "version": "0.0.0",
+  "author": "r3d0ct0pus",
+  "homepage": "",
+  "license": "MIT",
+  "main": "app/app.js",
+  "build": {
+    "appId": "com.example.electron-HrodvitnirFS",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "build"
+  },
+  "dependencies": {
+    "node-filelist": "^1.0.0",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "electron": "^1.4.10",
+    "electron-builder": "^10.8.1"
+  }
+}
