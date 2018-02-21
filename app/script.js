@@ -101,17 +101,16 @@ $(function () {
         });
       }
 
-
-//      w2ui.grid.refresh();
-    });
-    db.each("SELECT fileID, filename, fullpath FROM filedata", function (err, row) {
-      w2ui['grid'].records.push({
-        recid: row.fileID,
-        fpath: row.fullpath,
-        fname: row.filename
+      db.each("SELECT fileID, filename, fullpath FROM filedata", function (err, row) {
+        w2ui['grid'].records.push({
+          recid: row.fileID,
+          fpath: row.fullpath,
+          fname: row.filename
+        });
       });
-//      w2ui.grid.refresh();
+//     w2ui.grid.refresh('fpath');
     });
+
 
 
 //    $('#main').w2render('grid');
